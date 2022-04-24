@@ -1,83 +1,70 @@
-const reviews = [
-    {
-      id: 1,
-      name: "susan smith",
-      job: "web developer",
-      img: "https://tse1.mm.bing.net/th?id=OIP.KxQXszE3bkbSYQPWQ1sF7QHaE7&pid=Api&P=0&w=248&h=165https://tse1.mm.bing.net/th?id=OIP.KxQXszE3bkbSYQPWQ1sF7QHaE7&pid=Api&P=0&w=248&h=165",
-      text: "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry",
-    },
-    {
-      id: 2,
-      name: "anna johnson",
-      job: "web designer",
-      img: "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883409/person-2_np9x5l.jpg",
-      text: "Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin fashion axe.photo booth jean shorts artisan narwhal.",
-    },
-    {
-      id: 3,
-      name: "peter jones",
-      job: "intern",
-      img: "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
-      text: "Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.",
-    },
-    {
-      id: 4,
-      name: "bill anderson",
-      job: "the boss",
-      img: "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg",
-      text: "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
-    },
-  ];
 
-let indexToBeDisplayed = 0
+function buttonIsClicked(){
+    console.log("button was clicked")
 
-const currentElement = reviews[indexToBeDisplayed]
-
-const imageElement = document.querySelector("#image")
-const nameElement = document.querySelector(".name")
-const jobElement = document.querySelector(".job")
-const textElement = document.querySelector(".text")
-
-const nextBtn = document.querySelector("#next")
-const prevBtn = document.querySelector("#prev")
-const randomBtn = document.querySelector("#random")
-
-nextBtn.addEventListener('click', displayNext)
-prevBtn.addEventListener('click', displayPrev)
-
-randomBtn.addEventListener('click', displayRandom)
-
-function displayNext(){
-    if(indexToBeDisplayed === reviews.length-1){
-        indexToBeDisplayed = 0
-    }else{
-        indexToBeDisplayed++
+    for (let i = 0; i < 5; i++) {
+        console.log(i)
     }
-    console.log(indexToBeDisplayed)
-    updateScreen( reviews[indexToBeDisplayed] )
+
+    console.log("function finished")
 }
 
-function displayPrev(){
-    if(indexToBeDisplayed === 0){
-        indexToBeDisplayed = reviews.length-1
-    }else{
-        indexToBeDisplayed--
+
+function mulBy3(virat){
+    let x = virat*3
+    return x
+}
+
+function mulEachElementBy3(arr){
+    let y = []
+    for (let i = 0; i < arr.length ; i++) {
+        const answer = mulBy3(arr[i])
+        y.push(answer)
     }
-    console.log(indexToBeDisplayed)
-    updateScreen( reviews[indexToBeDisplayed] )
+    return y
+}
+
+const x = [11,21,31,41,51]
+const y = [1,2,3,4,5]
+const z = [8,7,6,5,]
+
+const result1 = mulEachElementBy2(x)
+const result2 = mulEachElementBy2(y)
+const result3 = mulEachElementBy2(z)
+ console.log(result1)
+ console.log(result2)
+ console.log(result3)
+
+
+const obj = {
+    name: "geek",
+    age: 16,
+    class: "10th",
+    subjects: ['maths', 'english', 'chem']
 }
 
 
-function displayRandom(){
-
-    console.log("display random user details")
+for(let key in obj){
+    console.log(key, obj[key])
 }
 
-function updateScreen(virat){
-    nameElement.innerText = virat.name
-    jobElement.innerText = virat.job
-    textElement.innerText = virat.text
-    imageElement.src = virat.img
+ const x = [11,21,31,41,51]
+const xx = [1,2,3,4]
+
+for(let element of x){
+    console.log(element)
 }
 
-updateScreen(currentElement)
+
+const arr= [1,2,3,4,5]
+
+const myArrElement = document.querySelector('.my-arr')
+
+for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+
+    const newElement = document.createElement('p')
+    newElement.innerText = element
+    myArrElement.appendChild(newElement)
+    
+}
