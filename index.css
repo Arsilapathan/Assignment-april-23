@@ -1,61 +1,83 @@
-.card{
-    border: 2px solid salmon;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    /* width: 50%; */
+*{
+    box-sizing: border-box;
 }
 
-#image{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+.normal-size{
+    width: 150px;
+    height: 150px;
+}
+
+.large-size{
+    width: 350px;
+    height: 350px;
 }
 
 .container{
-    /* border: 2px solid salmon; */
-    width: 50%;
+    border: 1px solid red;
+    width: 500px;
+    padding: 20px;
 }
 
-
-.center{
+body{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.column{
-    flex-direction: column;
+.form-element{
+    margin-bottom: 10px;
 }
 
-.name{
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-.job{
-    color: rgb(90, 161, 161);
-    font-weight: 300;
-    text-transform: uppercase;
-}
-
-.btn{
-    all: unset;
-    padding: 5px 10px;
-    border: 1px solid #e2aa5b;
-    cursor: pointer;
-    background-color: #FFECD1;
+input{
+    padding: 10px;
+    border: 1px solid gray;
     border-radius: 5px;
-
+    width: 100%;
 }
 
-.btn:hover{
-    background-color: #e9b772;
-
+label{
+    display: block;
+    font-size: 10px;
 }
 
-.button-group{
-    margin-bottom: 20px;
+#submit-btn{
+    padding: 5px 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: rgb(21, 231, 231);
+    width: 50%;
+    cursor: pointer;
 }
+
+
+
+.flex-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.error{
+    border: 2px solid salmon;
+}
+
+.success{
+    border: 2px solid green;
+}
+
+small{
+    color: salmon;
+    font-size: 10px;
+    visibility: hidden;
+    /* display: none; */
+}
+
+small.display{
+    visibility: visible;
+}
+
+/* .xyz.geek{
+
+} */
